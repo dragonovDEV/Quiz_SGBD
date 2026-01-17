@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz SGBD — 33 questions</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Quiz SGBD — 33 questions</h1>
+        <p>QCM à 3 choix, corrigé immédiat, questions mélangées. Made by Drago.</p>
+      </div>
+      <div class="pill-row">
+        <div class="pill"><span class="pill-label">Progression</span><strong id="pillCount">0/33</strong></div>
+        <div class="pill"><span class="pill-label">Score</span><strong id="pillScore">0</strong></div>
+        <div class="pill"><span class="pill-label">Série</span><strong id="pillStreak">0</strong></div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="card-inner" id="quizArea">
+        <div class="progress" aria-hidden="true"><div id="progressBar"></div></div>
+
+        <div class="q-meta">
+          <div>
+            <span id="qIndex">Question 1</span>
+            <span class="sep">•</span>
+            <span id="qTag" class="muted">SGBD</span>
+          </div>
+          <div class="toggle">
+            <label class="switch">
+              <input type="checkbox" id="loopToggle" checked />
+              <span>Mode boucle</span>
+            </label>
+            <button id="resetBtn" class="danger" type="button">Réinitialiser</button>
+          </div>
+        </div>
+
+        <div class="q-text" id="qText">...</div>
+
+        <div class="choices" id="choices"></div>
+
+        <div class="actions">
+          <div class="hint">
+            Raccourcis : <span class="kbd">1</span> <span class="kbd">2</span> <span class="kbd">3</span> choisir • <span class="kbd">Entrée</span> valider • <span class="kbd">N</span> suivant
+          </div>
+          <div class="btn-row">
+            <button id="checkBtn" class="primary" type="button">Valider</button>
+            <button id="nextBtn" type="button" disabled>Suivant</button>
+          </div>
+        </div>
+
+        <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="end" id="endScreen">
+        <h2>Fin du tour</h2>
+        <p id="endSummary">Score : 0/33</p>
+        <div class="end-actions">
+          <button id="restartBtn" class="primary" type="button">Recommencer (mélangé)</button>
+          <button id="reviewWrongBtn" type="button">Revoir uniquement mes erreurs</button>
+        </div>
+        <p class="small">Active ou désactive le mode boucle pour enchaîner plusieurs tours.</p>
+      </div>
+
+      <div class="footer">
+        <div>Thèmes : MCD, normalisation, Scrum, MRD, intégrité.</div>
+        <div class="small">Ouvre index.html dans ton navigateur.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
